@@ -1,6 +1,4 @@
 [![Build Status](https://travis-ci.org/ManuDevelopia/u-qasar.platform.svg)](https://travis-ci.org/ManuDevelopia/u-qasar.platform)
-
-
 [![Coverage Status](https://coveralls.io/repos/ManuDevelopia/u-qasar.platform/badge.svg?branch=master&service=github)](https://coveralls.io/github/ManuDevelopia/u-qasar.platform?branch=master)
 
 
