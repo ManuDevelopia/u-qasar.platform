@@ -1,6 +1,7 @@
-[![Build Status](https://travis-ci.org/ManuDevelopia/u-qasar.platform.svg)](https://travis-ci.org/ManuDevelopia/u-qasar.platform)
-[![Coverage Status](https://coveralls.io/repos/ManuDevelopia/u-qasar.platform/badge.svg?branch=master&service=github)](https://coveralls.io/github/ManuDevelopia/u-qasar.platform?branch=master)
-
+[![Build Status](https://travis-ci.org/U-QASAR/u-qasar.platform.svg?branch=master)](https://travis-ci.org/U-QASAR/u-qasar.platform)
+[![Coverage Status](https://coveralls.io/repos/U-QASAR/u-qasar.platform/badge.svg?branch=master&service=github)](https://coveralls.io/github/U-QASAR/u-qasar.platform?branch=master)
+[![Dependency Status](https://www.versioneye.com/user/projects/5656ef30ff016c002c001cd8/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5656ef30ff016c002c001cd8)
+[![](https://badge.waffle.io/U-QASAR/u-qasar.platform.svg?label=ready&title=Ready)](http://waffle.io/U-QASAR/u-qasar.platform)
 
 # U-QASAR Platform
 
@@ -11,7 +12,7 @@ The U-QASAR methodology [web book](http://webbook.uqasar.eu/) provides an overvi
 
 ## Architecture
 
-U-QASAR platform is a SOA based Web application following an MVC design pattern. The *model* layer contains persistence framework and ontology/knowledge repositories. The persistence layer provides CRUD operations to the data store. The controller takes care of the business logic and contains essential services for the platform, i.e. U-QASAR services (monitoring, analytical, enhancement, visualization and reporting) as well as supporting utility services. The *view* layer provides the user interfaces of the platform in form of HTML web pages. 
+U-QASAR platform is a SOA based Web application following an MVC design pattern. The *model* layer contains persistence framework and ontology/knowledge repositories. The persistence layer provides CRUD operations to the data store. The controller takes care of the business logic and contains essential services for the platform, i.e. U-QASAR services (monitoring, analytical, enhancement, visualization and reporting) as well as supporting utility services. The *view* layer provides the user interfaces of the platform in form of HTML web pages.
 
 * Web Framework: Apache Wicket
 * JavaScript Framework: JQuery
@@ -26,19 +27,19 @@ To use the project in Eclipse, the following plugin has to be installed:
 
 * m2e - Maven Integration for Eclipse
 
-To import the project to an Eclipse workspace: 
+To import the project to an Eclipse workspace:
 
 * "File --> Import... --> Existing Maven Projects"
 
-The required files by Eclipse (.project, .classpath) are created during the import. 
+The required files by Eclipse (.project, .classpath) are created during the import.
 
-After the import the following command has to be executed in Eclipse: 
+After the import the following command has to be executed in Eclipse:
 
-* "Run As --> Maven generate-sources" 
+* "Run As --> Maven generate-sources"
 
 * Modify in the pom.xml the entity `internal-repository` to point to your Maven repository. You will need the adapter libraries available (see Data adapters).
 
-The project can then be deployed on a JBoss-Server 
+The project can then be deployed on a JBoss-Server
 
 * As requirement the corresponding JBoss installation has to be configured as server in Eclipse
 * The project has been tested with the version [JBoss AS 7.1.1.Final Certified Java EE 6 Full Profile](http://www.jboss.org/jbossas/downloads/)
@@ -46,11 +47,11 @@ The project can then be deployed on a JBoss-Server
 
 ## Database
 
-* The platform requires a database. As of default an in-memory H2 database is used.	One can alternatively use a file based H2 database or a MySQL database. 
-* The DB configuration shall be provided in the included file `default.properties`. 
+* The platform requires a database. As of default an in-memory H2 database is used.	One can alternatively use a file based H2 database or a MySQL database.
+* The DB configuration shall be provided in the included file `default.properties`.
 * The instructions for configuring the platform to use MySQL are provided in the file README_MySQL.
 
-	
+
 ## Known issues
 
 * In case there are errors of type "JavaScript Problems" shown in Eclipse that are related to the file `src/main/webapp/assets/js/jquery-ui-1.9.1.custom.min.js`:
@@ -62,10 +63,10 @@ The project can then be deployed on a JBoss-Server
 
 ## Data adapters
 
-The U-QASAR platform acquires the external measurement data by using data wrapper, i.e. adapter implementations. The adapters fulfill the generic [U-QASAR interface](https://github.com/IntrasoftInternational/uQasarAdapter). At the moment there are reference implementations for the following external sources of data. The adapter implementations and their source code can be found in Github: 
+The U-QASAR platform acquires the external measurement data by using data wrapper, i.e. adapter implementations. The adapters fulfill the generic [U-QASAR interface](https://github.com/IntrasoftInternational/uQasarAdapter). At the moment there are reference implementations for the following external sources of data. The adapter implementations and their source code can be found in Github:
 
 * [Data adapter for Jira(R) Issue Tracking System](https://github.com/IntrasoftInternational/JiraAdapter)
-* [Data adapter for SonarQube(R) Static Code Analysis Software](https://github.com/wenns/SonarAdapter) 
+* [Data adapter for SonarQube(R) Static Code Analysis Software](https://github.com/wenns/SonarAdapter)
 * [Data adapter for TestLink Test Management Tool](https://github.com/MTPsqa/TestLinkAdapter)
 * [Data adapter for Cubes OLAP Server](https://github.com/ManuDevelopia/CubesAdapter)
 * [Data adapter for Jenkins Continuous Integration Tool](https://github.com/pialindqvist/JenkinsAdapter2/tree/jenkinskehitys)
@@ -76,4 +77,3 @@ The U-QASAR platform acquires the external measurement data by using data wrappe
 
 * The U-QASAR Platform is licensed under Apache License, version 2.0 (see LICENSE and NOTICE for details).
 * Please note that while Wicked Charts (https://github.com/thombergs/wicked-charts) is licensed under Apache 2.0 License, Highcharts itself is only free for non-commercial use. See here: [http://shop.highsoft.com/highcharts.html]
-

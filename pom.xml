@@ -183,7 +183,7 @@
 			<version>0.8</version>
 		</dependency>
 
-		<!-- the following is needed because Wicket uses slf4j 1.6.x and Weld uses 
+		<!-- the following is needed because Wicket uses slf4j 1.6.x and Weld uses
 			1.5.x which are not compatible -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -356,7 +356,7 @@
 			<version>4.2</version>
 		</dependency>
 
-		<!-- The Apache Tika™ toolkit for extracting metadata from various documents 
+		<!-- The Apache Tika™ toolkit for extracting metadata from various documents
 			using existing parser libraries. -->
 		<dependency>
 			<groupId>org.apache.tika</groupId>
@@ -483,10 +483,10 @@
 		<!-- ***************** -->
 		<!-- test dependencies -->
 		<!-- ***************** -->
-		<!-- if you want to use TestNG as test framework <dependency> <groupId>org.testng</groupId> 
-			<artifactId>testng</artifactId> <version>5.14.9</version> <scope>test</scope> 
-			</dependency> <dependency> <groupId>org.jboss.arquillian.testng</groupId> 
-			<artifactId>arquillian-testng-container</artifactId> <scope>test</scope> 
+		<!-- if you want to use TestNG as test framework <dependency> <groupId>org.testng</groupId>
+			<artifactId>testng</artifactId> <version>5.14.9</version> <scope>test</scope>
+			</dependency> <dependency> <groupId>org.jboss.arquillian.testng</groupId>
+			<artifactId>arquillian-testng-container</artifactId> <scope>test</scope>
 			</dependency> -->
 		<!-- if you want to use JUnit as test framework -->
 		<dependency>
@@ -605,7 +605,7 @@
 					<artifactId>buildnumber-maven-plugin</artifactId>
 					<version>1.2</version>
 				</plugin>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
+				<!--This plugin's configuration is used to store Eclipse m2e settings
 					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
@@ -695,7 +695,7 @@
 						</resource>
 					</webResources>
 
-					<!-- add org.jboss.msc dependencies to manifest, otherwise browser navigation 
+					<!-- add org.jboss.msc dependencies to manifest, otherwise browser navigation
 						(i.e. back button) may fail -->
 					<archive>
 						<manifestEntries>
@@ -704,7 +704,7 @@
 					</archive>
 				</configuration>
 			</plugin>
-			<!-- for generating meta model for entity classes to use in JPA Criteria 
+			<!-- for generating meta model for entity classes to use in JPA Criteria
 				API "right click project and Run As -> Maven generate-sources" -->
 			<plugin>
 				<groupId>org.bsc.maven</groupId>
@@ -741,23 +741,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- Create SVN version number -->
-<!-- 			<plugin> -->
-<!-- 				<groupId>org.codehaus.mojo</groupId> -->
-<!-- 				<artifactId>buildnumber-maven-plugin</artifactId> -->
-<!-- 				<executions> -->
-<!-- 					<execution> -->
-<!-- 						<phase>validate</phase> -->
-<!-- 						<goals> -->
-<!-- 							<goal>create</goal> -->
-<!-- 						</goals> -->
-<!-- 					</execution> -->
-<!-- 				</executions> -->
-<!-- 				<configuration> -->
-<!-- 					<doCheck>false</doCheck> -->
-<!-- 					<doUpdate>false</doUpdate> -->
-<!-- 				</configuration> -->
-<!-- 			</plugin> -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
@@ -767,9 +750,9 @@
 					<configLocation>${checkstyle.config.location}</configLocation>
 				</configuration>
 			</plugin>
-			<!-- JRebel plugin uncomment this if you want to use JRebel Maven Plugin 
-				<plugin> <groupId>org.zeroturnaround</groupId> <artifactId>jrebel-maven-plugin</artifactId> 
-				<executions> <execution> <id>generate-rebel-xml</id> <phase>process-resources</phase> 
+			<!-- JRebel plugin uncomment this if you want to use JRebel Maven Plugin
+				<plugin> <groupId>org.zeroturnaround</groupId> <artifactId>jrebel-maven-plugin</artifactId>
+				<executions> <execution> <id>generate-rebel-xml</id> <phase>process-resources</phase>
 				<goals> <goal>generate</goal> </goals> </execution> </executions> </plugin> -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -791,15 +774,15 @@
 		</plugins>
 	</build>
 
-	<!-- for switching Maven profiles within Eclipse, right-click project and 
+	<!-- for switching Maven profiles within Eclipse, right-click project and
 		select "Maven -> Select Maven Profiles..." -->
 	<profiles>
 		<!-- default profile -->
-		<!-- This should be used for development in Eclipse. For running/debugging 
-			the whole application: - right-click project and select Run/Debug As -> Run/Debug 
-			on Server For running/debugging tests: - change variable jboss.as7.home in 
-			default.properties to point to your local JBOSS_HOME directory - start local 
-			JBoss from within Eclipse in Debug mode - right-click project or test case 
+		<!-- This should be used for development in Eclipse. For running/debugging
+			the whole application: - right-click project and select Run/Debug As -> Run/Debug
+			on Server For running/debugging tests: - change variable jboss.as7.home in
+			default.properties to point to your local JBOSS_HOME directory - start local
+			JBoss from within Eclipse in Debug mode - right-click project or test case
 			and select Run As -> JUnit Test -->
 		<profile>
 			<id>default</id>
@@ -816,7 +799,7 @@
 			</dependencies>
 			<build>
 				<finalName>uqasar</finalName>
-				<!-- use default.properties file when filtering variables to replace 
+				<!-- use default.properties file when filtering variables to replace
 					jboss.as7.home variable with value provided in default.properties -->
 				<filters>
 					<filter>default.properties</filter>
@@ -842,7 +825,7 @@
 							<password>jboss</password>
 						</configuration>
 					</plugin>
-					<!-- org.jboss.msc dependency to MANIFEST.MF to avoid classloading problems 
+					<!-- org.jboss.msc dependency to MANIFEST.MF to avoid classloading problems
 						when using browser back button -->
 					<!-- also add SVN version number -->
 					<plugin>
@@ -852,8 +835,6 @@
 							<archive>
 								<manifestEntries>
 									<Dependencies>org.jboss.msc</Dependencies>
-<!-- 									<SCM-Revision>${buildNumber}</SCM-Revision> -->
-<!-- 									<SCM-Branch>${scmBranch}</SCM-Branch> -->
 								</manifestEntries>
 							</archive>
 						</configuration>
@@ -862,9 +843,9 @@
 			</build>
 		</profile>
 		<!-- profile for unit tests in managed JBoss 7 instance -->
-		<!-- To use, pass "-Parquillian-jboss7-managed" to mvn command. Will automatically 
-			download, install and start a JBoss server to run tests. No need to configure 
-			anything regarding the server. Can not be used to debug test cases from within 
+		<!-- To use, pass "-Parquillian-jboss7-managed" to mvn command. Will automatically
+			download, install and start a JBoss server to run tests. No need to configure
+			anything regarding the server. Can not be used to debug test cases from within
 			IDE. -->
 		<profile>
 			<id>arquillian-jboss7-managed</id>
@@ -917,23 +898,23 @@
 				</plugins>
 			</build>
 		</profile>
-		<!-- profile for unit tests in an already running JBoss 7 instance on a 
+		<!-- profile for unit tests in an already running JBoss 7 instance on a
 			local or remote machine -->
-		<!-- This could be used for running tests during build on build servers. 
-			You need a running JBoss instance on a remote machine. For running tests: 
-			- JBoss must be running on local or remote machine - change variables in 
-			arquillian-jboss7-remote to fit with your remote JBoss - pass "-Parquillian-jboss7-remote" 
-			to mvn command that is run on the build server You can also use this profile 
-			for debugging tests on a JBoss instance on a remote machine You need a running 
-			JBoss instance on a remote machine that is listening for debugging connections 
-			- in JBOSS_HOME/bin/standalone.conf uncomment the line by removing the leading 
-			# sign #JAVA_OPTS="$JAVA_OPTS -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n" 
-			For debugging tests on remote JBoss from within Eclipse: - JBoss must be 
-			running on remote machine in debug mode (see above) - change variables in 
-			arquillian-jboss7-remote to fit with your remote JBoss - Setup Remote Java 
-			Application Debug Configuration Run -> Debug Configurations... add new Remote 
-			Java Application set host to IP of your remote JBoss set port to 8787 - start 
-			the remote debug session in Eclipse - right-click test case and select Debug 
+		<!-- This could be used for running tests during build on build servers.
+			You need a running JBoss instance on a remote machine. For running tests:
+			- JBoss must be running on local or remote machine - change variables in
+			arquillian-jboss7-remote to fit with your remote JBoss - pass "-Parquillian-jboss7-remote"
+			to mvn command that is run on the build server You can also use this profile
+			for debugging tests on a JBoss instance on a remote machine You need a running
+			JBoss instance on a remote machine that is listening for debugging connections
+			- in JBOSS_HOME/bin/standalone.conf uncomment the line by removing the leading
+			# sign #JAVA_OPTS="$JAVA_OPTS -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n"
+			For debugging tests on remote JBoss from within Eclipse: - JBoss must be
+			running on remote machine in debug mode (see above) - change variables in
+			arquillian-jboss7-remote to fit with your remote JBoss - Setup Remote Java
+			Application Debug Configuration Run -> Debug Configurations... add new Remote
+			Java Application set host to IP of your remote JBoss set port to 8787 - start
+			the remote debug session in Eclipse - right-click test case and select Debug
 			As -> JUnit Test -->
 		<profile>
 			<id>arquillian-jboss7-remote</id>
@@ -947,7 +928,7 @@
 			</dependencies>
 			<build>
 				<finalName>uqasar</finalName>
-				<!-- use arquillian-jboss7-remote.properties file when filtering variables 
+				<!-- use arquillian-jboss7-remote.properties file when filtering variables
 					to replace jboss.as7.XYZ variables with values provided in arquillian-jboss7-remote.properties -->
 				<filters>
 					<filter>arquillian-jboss7-remote.properties</filter>
@@ -974,7 +955,7 @@
 			</dependencies>
 			<build>
 				<finalName>uqasar</finalName>
-				<!-- use jenkins.properties file when filtering variables to replace 
+				<!-- use jenkins.properties file when filtering variables to replace
 					jboss.as7.XYZ variables with values provided in jenkins.properties -->
 				<filters>
 					<filter>jenkins.properties</filter>
