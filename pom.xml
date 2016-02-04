@@ -689,6 +689,7 @@
 							<!-- enable filtering -->
 							<filtering>true</filtering>
 							<includes>
+								<include>**/web.xml</include>
 								<include>**/main-ds.xml</include>
 								<include>**/jboss-web.xml</include>
 							</includes>
